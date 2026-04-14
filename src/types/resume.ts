@@ -52,7 +52,7 @@ export interface ResumeCustomization {
   sectionOrder: string[];
 }
 
-export type TemplateName = 'minimal' | 'corporate' | 'creative' | 'dark' | 'elegant';
+export type TemplateName = 'minimal' | 'corporate' | 'creative' | 'dark' | 'elegant' | 'executive' | 'modern' | 'silicon' | 'wallstreet' | 'billionaire';
 
 export interface ResumeData {
   personalInfo: PersonalInfo;
@@ -75,11 +75,16 @@ export const FONT_OPTIONS = [
 ];
 
 export const TEMPLATE_INFO: Record<TemplateName, { name: string; description: string; premium: boolean }> = {
-  minimal: { name: 'Minimal Clean', description: 'Clean and simple design', premium: false },
-  corporate: { name: 'Corporate Blue', description: 'Professional corporate look', premium: false },
-  creative: { name: 'Creative Designer', description: 'Bold and artistic layout', premium: true },
-  dark: { name: 'Dark Modern', description: 'Sleek dark theme', premium: true },
-  elegant: { name: 'Elegant Premium', description: 'Sophisticated classic style', premium: true },
+  minimal: { name: 'The Minimalist', description: 'Clean, simple, and effective for any role.', premium: false },
+  corporate: { name: 'Corporate Pro', description: 'Traditional and reliable for established firms.', premium: false },
+  creative: { name: 'Creative Pulse', description: 'Stand out with a design that speaks your talent.', premium: true },
+  dark: { name: 'Dark Mode', description: 'Sleek and professional for tech and design.', premium: true },
+  elegant: { name: 'The Elegant', description: 'A sophisticated touch for senior positions.', premium: true },
+  executive: { name: 'Executive Slate', description: 'Premium sidebar layout for management elite.', premium: true },
+  modern: { name: 'Modern Orbit', description: 'Contemporary aesthetic with balanced whitespace.', premium: true },
+  silicon: { name: 'Silicon Valley Elite', description: 'ATS-Perfect single column. Hired at Google & Apple.', premium: true },
+  wallstreet: { name: 'Wall Street Professional', description: 'High-stakes prestige. Trusted by Microsoft & Banking.', premium: true },
+  billionaire: { name: 'The Billionaire Edition', description: 'The gold standard for CEOs and high-level leaders.', premium: true },
 };
 
 export const defaultResumeData: ResumeData = {

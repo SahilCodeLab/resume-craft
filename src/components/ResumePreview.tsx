@@ -1,5 +1,5 @@
 import { useResume } from '@/contexts/ResumeContext';
-import { MinimalTemplate, CorporateTemplate, CreativeTemplate, DarkTemplate, ElegantTemplate } from '@/components/templates/ResumeTemplates';
+import { MinimalTemplate, CorporateTemplate, CreativeTemplate, DarkTemplate, ElegantTemplate, ExecutiveTemplate, ModernTemplate, SiliconValleyEliteTemplate, WallStreetTemplate, BillionaireTemplate } from '@/components/templates/ResumeTemplates';
 import { useRef } from 'react';
 
 interface Props {
@@ -18,6 +18,11 @@ const ResumePreview = ({ watermark = true, previewRef }: Props) => {
     creative: CreativeTemplate,
     dark: DarkTemplate,
     elegant: ElegantTemplate,
+    executive: ExecutiveTemplate,
+    modern: ModernTemplate,
+    silicon: SiliconValleyEliteTemplate,
+    wallstreet: WallStreetTemplate,
+    billionaire: BillionaireTemplate,
   };
 
   const Template = templateMap[data.template];
