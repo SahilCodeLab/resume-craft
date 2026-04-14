@@ -350,11 +350,10 @@ const BuilderPage = () => {
                 <Button onClick={() => { handleDownload(true); setShowSuccess(false); }} variant="ghost" className="w-full text-xs text-muted-foreground" disabled={downloading}>
                   Download free version (with watermark)
                 </Button>
-              </div>
+              </motion.div>
             </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+          )}
+        </AnimatePresence>
 
       {/* Footer */}
       <footer className="py-8 px-6 text-center border-t border-slate-100 bg-white/50 backdrop-blur-sm mt-12">

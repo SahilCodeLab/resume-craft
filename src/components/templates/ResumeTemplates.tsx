@@ -908,6 +908,7 @@ export const BillionaireTemplate = ({ data, watermark }: Props) => {
           </SectionWrapper>
         </div>
       </div>
+    </div>
   );
 };
 
