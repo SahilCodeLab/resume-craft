@@ -8,7 +8,7 @@ interface Props {
 
 const SectionWrapper = ({ visible, children }: { visible: boolean; children: React.ReactNode }) => {
   if (!visible) return null;
-  return <>{children}</>;
+  return <div style={{ breakInside: 'avoid' }}>{children}</div>;
 };
 
 export const MinimalTemplate = ({ data, watermark }: Props) => {

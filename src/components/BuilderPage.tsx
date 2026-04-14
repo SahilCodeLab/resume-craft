@@ -71,10 +71,9 @@ const BuilderPage = () => {
       const element = previewRef.current;
       await html2pdf().set(opt).from(element).toPdf().get('pdf').then((pdf: any) => {
         const totalPages = pdf.internal.getNumberOfPages();
-        // Remove blank pages if they exist (heuristically)
-        if (totalPages > 1) {
-          // In a real scenario, we'd check if page 2 is blank, 
-          // but usually html2pdf does this if content overflows even by 1 pixel.
+        // If content height is roughly 1 page but it generated 2, delete the 2nd blank page
+        if (totalPages > 1 && element.scrollHeight < 1130) {
+          pdf.deletePage(totalPages);
         }
       }).save();
       
